@@ -1,6 +1,8 @@
-####################
-### Introduction ###
-####################
+#######################################
+### Introduction                    ###
+### Last Release: 0.0.1-Beta        ###
+### Contact: vig.esc@googlemail.com ###
+#######################################
 
 Basicly a Kartina.tv Player that comes with an OSD like you would expect it on a set-top-box.
 
@@ -12,25 +14,45 @@ Should work on Linux, Mac & Windows (currently only tested on Linux, shutdown di
 
 current features:
 
-- browsing & playing channels
-- browsing & playing archive
-- seeking
+ - browsing & playing channels
+ - browsing & playing archive
+ - seeking
+
 currently NOT supported:
 
-- browsing & playing VOD
-- favorites
-- settings
-- other languages besides german (but there are only few dialogs that are in german and not in russian like the shutdown dialog)
-- streaming options, like buffersize etc.
-- changing hotkeys
-- recording
-- and anyhing else you could think of, this is strictly for a testing purpose at the moment
+ - browsing & playing VOD
+ - favorites
+ - settings
+ - other languages besides german (but there are only few dialogs that are in german and not in russian like the shutdown dialog)
+ - streaming options, like buffersize etc.
+ - changing hotkeys
+ - recording
+ - and anyhing else you could think of, this is strictly for a testing purpose at the moment
 
 #####################
 ### Configuration ###
 #####################
 
-1) Edit Kartina.py's last line to enter your Kartina.tv login
-2) Look at the Keybindings in OSD.py, they're named and designed after standard remote keys
+(1) setting login:
+    Edit Kartina.py's last line to enter your Kartina.tv login (by default it is set to a test account, 141:141, which won't always work)
+    interface = API('USERID', 'PASSWORD')
 
-I'll explain further details as soon this will be anywhere near stable.
+(2) Look at the Keybindings in OSD.py, they're named and designed after standard remote keys
+    Those are the default ones:
+    
+    Up/Down/Left/Right:       Arrow-Keys
+    OK: Return
+    Red: F5
+    Green: F6
+    Toggle Fullscreen: F
+    Toggle Letterbox: F10
+    Seek 1 Min Forward: J
+    Seek 10 Min Forward: L
+    Seek 1 Min Backward: H
+    Seek 10 Min Backward: K
+    Play/Pause: P
+    Stop: S
+    Close/Shutdown: X
+    
+Well, it works. At least for me. Feel free to try it, but don't blame me if something happens.
+This is BETA software.
