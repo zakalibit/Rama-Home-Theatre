@@ -1,0 +1,36 @@
+####################
+### Introduction ###
+####################
+
+Basicly a Kartina.tv Player that comes with an OSD like you would expect it on a set-top-box.
+
+Main goal of the project is to provide a nice interface for a HTPC.
+
+Based on PyQt4?, Python3 & Python VLC Bindings
+
+Should work on Linux, Mac & Windows (currently only tested on Linux, shutdown dialog only works in linux so far, watching TV should work anywhere)
+
+current features:
+
+- browsing & playing channels
+- browsing & playing archive
+- seeking
+currently NOT supported:
+
+- browsing & playing VOD
+- favorites
+- settings
+- other languages besides german (but there are only few dialogs that are in german and not in russian like the shutdown dialog)
+- streaming options, like buffersize etc.
+- changing hotkeys
+- recording
+- and anyhing else you could think of, this is strictly for a testing purpose at the moment
+
+#####################
+### Configuration ###
+#####################
+
+1) Edit Kartina.py's last line to enter your Kartina.tv login
+2) Look at the Keybindings in OSD.py, they're named and designed after standard remote keys
+
+I'll explain further details as soon this will be anywhere near stable.
