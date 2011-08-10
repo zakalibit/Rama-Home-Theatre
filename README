@@ -40,19 +40,19 @@ currently NOT supported:
 (2) Look at the Keybindings in OSD.py, they're named and designed after standard remote keys
     Those are the default ones:
     
-    Up/Down/Left/Right:       Arrow-Keys
-    OK: Return
-    Red: F5
-    Green: F6
-    Toggle Fullscreen: F
-    Toggle Letterbox: F10
-    Seek 1 Min Forward: J
-    Seek 10 Min Forward: L
-    Seek 1 Min Backward: H
-    Seek 10 Min Backward: K
-    Play/Pause: P
-    Stop: S
-    Close/Shutdown: X
+    Up/Down/Left/Right:.....Arrow-Keys
+    OK:.....................Return
+    Red:....................F5
+    Green:..................F6
+    Toggle Fullscreen:......F
+    Toggle Letterbox:.......F10
+    Seek 1 Min Forward:.....J
+    Seek 10 Min Forward:....L
+    Seek 1 Min Backward:....H
+    Seek 10 Min Backward:...K
+    Play/Pause:.............P
+    Stop:...................S
+    Close/Shutdown:.........X
     
 Well, it works. At least for me. Feel free to try it, but don't blame me if something happens.
 This is BETA software.

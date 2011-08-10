@@ -1,7 +1,6 @@
 import urllib.request
 import xml.dom.minidom
-import time, math, OSD
-from PyQt4 import QtGui
+import time, math
 
 def dokument(domina):
     for node in domina.childNodes:

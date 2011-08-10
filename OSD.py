@@ -543,7 +543,7 @@ class OSDInfo(OSD):
             channel.fillEPG(time.strftime("%d%m%y", time.localtime(Kartina.getTime())))
             self.getProgramsFromEPG(channel.getEPG())
             if self.ctime == None:
-                channel.fillEPG(time.strftime("%d%m%y", time.localtime(Kartina.getTime()-24*3600)))
+                channel.fillEPG(time.strftime("%d%m%y", time.localtime(Kartina.getTime()+24*3600)))
                 self.getProgramsFromEPG(channel.getEPG())
                 if self.ctime == None:
                     self.ctime = Kartina.getTime()
@@ -551,6 +551,9 @@ class OSDInfo(OSD):
                 if self.cntime == None:
                     self.cntime = Kartina.getTime()
                     self.cnprog = "- Nicht verfügbar -"
+            if self.cntime == None:
+                self.cntime = Kartina.getTime()
+                self.cnprog = "- Nicht verfügbar -"
         else:
             channel.fillEPG(self.parent.Video.EPG.playDay)
             setbreak = False
@@ -774,11 +777,11 @@ class OSDShutDown(OSDList):
     def showContent(self):
         self.lTitle.setStyleSheet("background-color: #419934;")
         self.lTitle.setText("<font style='color: #000000; font-size: " + self.fontsize + "px'>&nbsp;<b>Wie ausschalten?</b></font>")
-        #helpfont = str(math.floor((int(self.fontsize)*7)/10))
-        self.lHelp.setText("<font style='color: #FFFFFF; font-size: " + self.fontsize + "px'>&nbsp;<font style='color: #FF0000;'><b>(|)</b></font> Abbrechen&nbsp;</font>")
-        self.lOption1.setText("<font style='color: #FFFFFF; font-size: " + self.fontsize + "px'>&nbsp;<b>Rama Ausschalten</b></font>")
-        self.lOption2.setText("<font style='color: #FFFFFF; font-size: " + self.fontsize + "px'>&nbsp;<b>Herunterfahren</b></font>")
-        self.lOption3.setText("<font style='color: #FFFFFF; font-size: " + self.fontsize + "px'>&nbsp;<b>Bereitschaft</b></font>")
+        helpfont = str(math.floor((int(self.fontsize)*7)/10))
+        self.lHelp.setText("<font style='color: #FFFFFF; font-size: " + helpfont + "px'>&nbsp;<font style='color: #FF0000;'><b>⚪</b></font> Abbrechen&nbsp;</font>")
+        self.lOption1.setText("<font style='color: #FFFFFF; font-size: " + self.fontsize + "px'>&nbsp;<b>✖ Rama Ausschalten</b></font>")
+        self.lOption2.setText("<font style='color: #FFFFFF; font-size: " + self.fontsize + "px'>&nbsp;<b>◓ Herunterfahren</b></font>")
+        self.lOption3.setText("<font style='color: #FFFFFF; font-size: " + self.fontsize + "px'>&nbsp;<b>◕ Bereitschaft</b></font>")
         OSDList.showContent(self, self.listOfContent)
         
     def applyContent(self, i, start, item):
