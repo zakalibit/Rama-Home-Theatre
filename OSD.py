@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 from PyQt4 import QtGui, QtCore
 import os, math, urllib, time, Kartina
+import urllib2
 
 pausedelay = 0
 archivePlayBuffer = 0
@@ -572,7 +574,7 @@ class OSDInfo(OSD):
         
     def getIcon(self):
         if self.cicon != None:
-            opener = urllib.request.build_opener()
+            opener = urllib2.build_opener()
             try:
                 url = opener.open('http://iptv.kartina.tv' + self.cicon)
             except urllib.error.URLError:

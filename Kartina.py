@@ -1,4 +1,6 @@
-import urllib.request
+# -*- coding: utf-8 -*-
+import urllib2
+
 import xml.dom.minidom
 import time, math
 
@@ -25,7 +27,7 @@ class KartinaError(Exception):
 
 class API:
     def __init__(self, login, password):
-        self.opener = urllib.request.build_opener()
+        self.opener =  urllib2.build_opener()
         url = kapi + "login?login=" + login + "&pass=" + password        
         dom = self.getDOM(url)
         
@@ -205,4 +207,4 @@ class Channel:
                     for epg in e.childNodes:
                         self.addEPGItem(epg.childNodes[0].firstChild.data, epg.childNodes[1].firstChild.data)
                         
-interface = API('141', '141')
+interface = API('140', '041')
